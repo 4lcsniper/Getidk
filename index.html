@@ -14,7 +14,7 @@ if (-not $args) {
     if ($ExecutionContext.SessionState.LanguageMode.value__ -ne 0) {
         $ExecutionContext.SessionState.LanguageMode
         Write-Host "PowerShell is not running in Full Language Mode."
-        Write-Host "Help - https://massgrave.dev/fix_powershell" -ForegroundColor White -BackgroundColor Blue
+        Write-Host "" -ForegroundColor White -BackgroundColor Blue
         return
     }
 
@@ -24,7 +24,7 @@ if (-not $args) {
     catch {
         Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Red
         Write-Host "Powershell failed to load .NET command."
-        Write-Host "Help - https://massgrave.dev/in-place_repair_upgrade" -ForegroundColor White -BackgroundColor Blue
+        Write-Host "" -ForegroundColor White -BackgroundColor Blue
         return
     }
 
